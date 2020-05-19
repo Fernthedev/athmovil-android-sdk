@@ -181,6 +181,7 @@ public class OpenATHM {
         String appId = context.getPackageName() + "." + callbackSchema;
         Intent intent = new Intent(appId);
         intent.putExtra(ConstantUtil.RETURNED_JSON_KEY,json);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }
     /**
